@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+/* comentarios */
+body{
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: black;
+    background-color: cornsilk;
+
+}
+
+/* encabezado */
+
+header{
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #F0AC9E;
+    color: black;
+}
+
+header h1{
+    margin: 0%;
+    font-size: 48px;
+}
+
+header p{
+    margin-top: 10px;
+    font-size: 25px;
+    font-style: italic;
+}
+
+/* Navegacion */
+
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+    background-color: wheat;
+    border-bottom: 1px solid #ddd;
+}
+
+nav a{
+    color: azure;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+/* Main */
+
+main{
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: beige;
+    
+}
+
+/* Secciones */
+
+section{
+    padding: 60px 40px;
+    border-bottom: 1px solid black;
+}
+
+section h2{
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Seccion Inicio */
+.seccion-inicio{
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
