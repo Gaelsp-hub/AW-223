@@ -1,43 +1,40 @@
-*{
+* {
     box-sizing: border-box;
-
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
-/* comentarios */
-body{
+
+body {
     margin: 0%;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: black;
     background-color: rgba(243, 237, 176, 0.823);
-
 }
 
-/* encabezado */
-
-header{
+/* Encabezado */
+header {
     text-align: center;
     padding: 50px 20px;
     background-color: gainsboro;
     color: black;
 }
 
-header h1{
+header h1 {
     margin: 0%;
     font-size: 48px;
 }
 
-header p{
+header p {
     margin-top: 10px;
     font-size: 25px;
     font-style: italic;
 }
 
-/* Navegacion */
-
-nav{
+/* Navegación */
+nav {
     display: flex;
     justify-content: center;
     gap: 25px;
@@ -46,41 +43,38 @@ nav{
     border-bottom: 1px solid #ddd;
 }
 
-nav a{
+nav a {
     color: azure;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav a:hover{
+nav a:hover {
     text-decoration: underline;
 }
 
 /* Main */
-
-main{
+main {
     max-width: 1100px;
     margin: 0 auto;
     background-color: beige;
-    
 }
 
 /* Secciones */
-
-section{
+section {
     padding: 60px 40px;
     border-bottom: 1px solid black;
 }
 
-section h2{
+section h2 {
     margin-top: 0;
     margin-bottom: 30px;
     text-align: center;
     font-size: 30px;
 }
 
-/* Seccion Inicio */
-.seccion-inicio{
+/* Sección Inicio */
+.seccion-inicio {
     min-height: 400px;
     display: flex;
     justify-content: center;
@@ -88,46 +82,40 @@ section h2{
     text-align: center;
 }
 
-.seccion-contenido{
+.seccion-contenido {
     max-width: 700px;
-    
 }
 
-.seccion-contenido h2{
+.seccion-contenido h2 {
     font-size: 42px;
     margin-bottom: 15px;
-
 }
 
-.seccion-contenido p{
+.seccion-contenido p {
     font-size: 20px;
     margin-bottom: 30px;
-
 }
 
-/* boton */
-
-.boton,button{
-display: inline-block;
-padding: 12px 25px;
-border: none;
-border-radius: 5px;
-background: black;
-color: bisque;
-text-decoration: none;
-font-size: 16px;
-cursor: pointer;
+/* Botón */
+.boton, button {
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    background: black;
+    color: bisque;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-.boton:hover,button:hover{
+.boton:hover, button:hover {
     background-color: rgba(197, 194, 194, 0.947);
     color: black;
 }
 
-
-/* seccion sobre mi */
-
-.sobre-mi-contenido{
+/* Sección Sobre mí */
+.sobre-mi-contenido {
     display: flex;
     align-items: center;
     gap: 40px;
@@ -135,66 +123,137 @@ cursor: pointer;
     margin: 0 auto;
 }
 
-.sobre-mi-contenido img{
+.sobre-mi-contenido img {
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
 }
 
-.seccion-contenido p{
-    font-size: 18px;
-
-}
-
-
 /* Habilidades */
-.lista-habilidades{
+.lista-habilidades {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
     padding: 0;
     list-style: none;
-
 }
 
-.lista-habilidades li{
+.lista-habilidades li {
     padding: 12px 20px;
     background-color: aliceblue;
     border: 3px solid black;
     border-radius: 5px;
     font-weight: bold;
-
 }
 
-/* seccion-proyectos */
-
-.contenedor-proyectos{
+/* ===================================================
+   PROYECTOS
+   =================================================== */
+.contenedor-proyectos {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-
 }
 
-.proyecto{
+.proyecto {
     flex: 1;
     min-width: 250px;
     padding: 25px;
-    border: 1px solid black;
+    border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: aliceblue;
-
+    background-color: #fafafa;
 }
 
-.proyecto h3{
+.proyecto h3 {
     margin-top: 0;
     font-size: 22px;
-
 }
 
 .proyecto a {
-    color: blueviolet;
+    color: #333;
     font-weight: bold;
-    
+}
+
+/* ===================================================
+   FORMULARIO
+   =================================================== */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+form button {
+    width: 100%;
+}
+
+/* ===================================================
+   PIE DE PÁGINA
+   =================================================== */
+footer {
+    padding: 30px 20px;
+    text-align: center;
+    background-color: #222;
+    color: white;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* ===================================================
+   DISEÑO RESPONSIVE
+   =================================================== */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    .seccion-contenido h2 {
+        font-size: 32px;
+    }
+
+    .sobre-mi-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contenedor-proyectos {
+        flex-direction: column;
+    }
 }
