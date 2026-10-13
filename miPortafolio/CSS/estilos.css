@@ -148,9 +148,7 @@ section h2 {
     font-weight: bold;
 }
 
-/* ===================================================
-   PROYECTOS
-   =================================================== */
+/* PROYECTOS */
 .contenedor-proyectos {
     display: flex;
     gap: 20px;
@@ -176,9 +174,7 @@ section h2 {
     font-weight: bold;
 }
 
-/* ===================================================
-   FORMULARIO
-   =================================================== */
+/* FORMULARIO */
 form {
     max-width: 600px;
     margin: 0 auto;
@@ -212,9 +208,7 @@ form button {
     width: 100%;
 }
 
-/* ===================================================
-   PIE DE PÁGINA
-   =================================================== */
+/* PIE DE PÁGINA */
 footer {
     padding: 30px 20px;
     text-align: center;
@@ -227,8 +221,82 @@ footer p {
 }
 
 /* ===================================================
-   DISEÑO RESPONSIVE
+   ESTILOS ZONA ADMINISTRACIÓN (NUEVO)
    =================================================== */
+.bar-iconos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.bar-iconos a {
+    font-size: 26px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s ease;
+}
+
+.bar-iconos a:hover {
+    transform: scale(1.2);
+}
+
+.contenedor-admin {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-admin h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+/* Tabla de mensajes */
+.tabla-admin {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.tabla-admin th {
+    background-color: #222;
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+}
+
+.tabla-admin td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.tabla-admin tr:hover {
+    background-color: #f9f9f9;
+}
+
+.acciones-icono {
+    display: inline-block;
+    padding: 4px 8px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.acciones-icono:hover {
+    background-color: #eee;
+}
+
+/* DISEÑO RESPONSIVE */
 @media (max-width: 600px) {
     header h1 {
         font-size: 32px;
@@ -255,5 +323,10 @@ footer p {
 
     .contenedor-proyectos {
         flex-direction: column;
+    }
+
+    .tabla-admin {
+        display: block;
+        overflow-x: auto;
     }
 }
