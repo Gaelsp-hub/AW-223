@@ -18,8 +18,9 @@ $stmt->bind_param("sss", $nombre, $correo, $mensaje);
 
 // 4. Ejecutamos la consulta
 if ($stmt->execute()) {
-    echo "Mensaje guardado correctamente.";
+    header("Location: ../index.html?status=success"); // Redirige a la página de inicio después de guardar el mensaje
 } else {
-    echo "Error al guardar el mensaje: " . $stmt->error;
+    header("Location: ../index.html?status=error"); // Redirige a la página de inicio si hay un error
+    
 }
 ?>
