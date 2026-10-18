@@ -23,7 +23,7 @@ $rsMensajes = consultaMensajes();
     </header>
 
     <div class="bar-iconos">
-        <a href="../index.html" title="Volver al Portafolio">INICIO</a>
+        <a href="../index.php" title="Volver al Portafolio">🏠</a>
     </div>
 
     <main>

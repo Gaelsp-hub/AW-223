@@ -16,8 +16,8 @@
 
     <!-- Íconos de regreso a la administración y al portafolio -->
     <div class="bar-iconos">
-        <a href="admin.php" title="Volver a Admin">CANCELAR</a>
-        <a href="../index.html" title="Volver al Portafolio">INICIO</a>
+        <a href="admin.php" title="Volver a Admin">🔙</a>
+        <a href="../index.php" title="Volver al Portafolio">🏠</a>
     </div>
 
     <!-- Contenido principal -->

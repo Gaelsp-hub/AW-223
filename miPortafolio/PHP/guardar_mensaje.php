@@ -18,9 +18,9 @@ $stmt->bind_param("sss", $nombre, $correo, $mensaje);
 
 // 4. Ejecutamos la consulta
 if ($stmt->execute()) {
-    header("Location: ../index.html?status=success"); // Redirige a la página de inicio después de guardar el mensaje
+    header("Location: ../index.php?status=success"); // Redirige a la página de inicio después de guardar el mensaje
 } else {
-    header("Location: ../index.html?status=error"); // Redirige a la página de inicio si hay un error
-    
+    header("Location: ../index.php?status=error"); // Redirige a la página de inicio si hay un error
+
 }
 ?>

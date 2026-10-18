@@ -11,7 +11,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: black;
-    background-color: rgba(243, 237, 176, 0.823);
+    background-color: rgba(186, 186, 183, 0.823);
 }
 
 /* Encabezado */
@@ -57,7 +57,7 @@ nav a:hover {
 main {
     max-width: 1100px;
     margin: 0 auto;
-    background-color: beige;
+    background-color: gray;
 }
 
 /* Secciones */
