@@ -43,13 +43,13 @@ $rsMensajes = consultaMensajes();
                 <tbody>
                     <?php while ($arrMensajes = mysqli_fetch_array($rsMensajes)) { ?>
                         <tr>
-                            <td><?php echo $arrMensajes['nombre']; ?></td>
-                            <td><?php echo $arrMensajes['correo']; ?></td>
-                            <td><?php echo $arrMensajes['mensaje']; ?></td>
-                            <td><?php echo $arrMensajes['timesStaps']; ?></td>
+                           <td><?php echo htmlspecialchars($arrMensajes['nombre']); ?></td>
+                           <td><?php echo htmlspecialchars($arrMensajes['correo']); ?></td>
+                           <td><?php echo htmlspecialchars($arrMensajes['mensaje']); ?></td>
+                           <td><?php echo $arrMensajes['timesStaps']; ?></td>
                             <td>
-                                <a href="editar.php?id=<?php echo $arrMensajes['id']; ?>" class="acciones-icono" title="Editar">✏️</a>
-                                <a href="borrar.php?id=<?php echo $arrMensajes['id']; ?>" class="acciones-icono" title="Borrar">🗑️</a>
+                              <a href="editar.php?id=<?php echo $arrMensajes['id']; ?>" class="acciones-icono" title="Editar">✏️</a>
+                              <a href="borrar.php?id=<?php echo $arrMensajes['id']; ?>" class="acciones-icono" title="Borrar" onclick="return confirm('¿Confirmas que deseas eliminar este mensaje?');">🗑️</a>
                             </td>
                         </tr>
                     <?php } ?>
