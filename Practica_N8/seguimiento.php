@@ -1,4 +1,4 @@
-<?php
+// Lo realizo: GAEL<?php
 require_once 'conexion.php';
 $mensaje = "";
 
