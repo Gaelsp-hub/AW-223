@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #d3d3d0;
+    color: #111;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: gainsboro;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    background-color: #555;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #888;
+}
+
+section {
+    padding: 50px 30px;
+    border-bottom: 1px solid #222;
+}
+
+section h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.fila {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.foto-perfil {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.lista-habilidades {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.lista-habilidades li {
+    padding: 10px 20px;
+    background-color: aliceblue;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.tarjeta {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 8px;
+}
+
+/* Formularios */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.boton, button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: black;
+    color: bisque;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Tabla Admin */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #222;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #222;
+    color: white;
+}
