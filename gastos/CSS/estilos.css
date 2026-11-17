@@ -1,0 +1,32 @@
+header{
+    align-content: center;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: auto;
+    background-color: rgb(187, 250, 132);
+    border-bottom: 2px solid black;
+}
+
+nav{
+    align-content: center;
+    text-align: center;
+    border-bottom: 2px solid black;
+    background-color: aliceblue;
+    padding: 30px;
+    margin-right: 50px;
+
+}
+
+div p {
+    border-bottom: 2px solid black;
+    background-color: rgb(210, 255, 232);
+    padding: 30%;
+    align-content: center;
+    text-align: center;
+}
+
+footer{
+    background-color: rgb(172, 233, 176);
+    align-content: center;
+    text-align: center;
+}

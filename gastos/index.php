@@ -4,21 +4,23 @@ require_once 'conexion.php';
 $mensaje = "";
 $tipoMensaje = "";
 
-if (isset($_POST['registrar_gasto'])) {
+if (isset($_POST['guardar_gasto'])) {
+    $concepto = trim($_POST['concepto']);
+    $monto = floatval($_POST['monto']);
+    $categoria = trim($_POST['categoria']);
 
-    $concep = $conexion->real_escape_string(trim($_POST['gasto']));
-    
+    $stmt = $conexion->prepare("INSERT INTO gastos (concepto, monto, categoria) VALUES (?, ?, ?)");
+    $stmt->bind_param("sds", $concepto, $monto, $categoria);
 
-    $sql = "INSERT INTO concepto (concepto)
-            VALUES ('$concep')";
-
-    if ($conexion->query($sql)) {
+    if ($stmt->execute()) {
         $mensaje = "Gasto registrado con éxito.";
         $tipoMensaje = "alert-success";
     } else {
-        $mensaje = "Error al registrar: " . $conexion->error;
+        $mensaje = "Error al registrar: " . $stmt->error;
         $tipoMensaje = "alert-error";
     }
+
+    $stmt->close();
 }
 ?>
 
@@ -27,20 +29,19 @@ if (isset($_POST['registrar_gasto'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar usuarios</title>
+    <title>Registrar Gastos</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-
 <body>
 
 <header>
-    <h1>Tienda Web</h1>
+    <h1>Control de Gastos</h1>
     <h2>Bienvenidos</h2>
 </header>
 
 <nav>
-    <a href="index.php">Agregar Gasto</a>
-    <a href="VerProducts.php">Ver Gasto</a>
+    <a href="index.php">Agregar gastos</a>
+    <a href="VerProducts.php">Ver Gastos</a>
 </nav>
 
 <div class="container">
@@ -52,24 +53,27 @@ if (isset($_POST['registrar_gasto'])) {
     <?php endif; ?>
 
     <div class="card">
-        <h2>Formulario de usuario</h2>
+        <h2>Formulario de Gastos</h2>
 
         <form action="" method="POST">
-
             <div class="form-group">
-                <label>Nombre:</label>
-                <input type="text" name="nombre" required>
+                <label>Concepto:</label>
+                <input type="text" name="concepto" required>
             </div>
 
             <div class="form-group">
-                <label>Correo:</label>
-                <input type="email" name="correo" required>
+                <label>Monto:</label>
+                <input type="number" step="0.01" min="0" name="monto" required>
             </div>
 
-            <button type="submit" name="guardar_usuario" class="btn-primary">
-                Guardar usuario
+            <div class="form-group">
+                <label>Categoría:</label>
+                <input type="text" name="categoria" required>
+            </div>
+
+            <button type="submit" name="guardar_gasto" class="btn-primary">
+                Guardar gasto
             </button>
-
         </form>
     </div>
 
@@ -77,7 +81,7 @@ if (isset($_POST['registrar_gasto'])) {
 
 <footer>
     <p>Redes Sociales</p>
-    <p>Practicas</p>
+    <p>Prácticas</p>
 </footer>
 
 </body>
