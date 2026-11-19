@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 20px;
+}
+
+.encabezado {
+  background-color: white;
+  border: 1px solid gray;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+input {
+  padding: 6px;
+  width: 250px;
+  margin-bottom: 15px;
+}
+
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.tarjeta {
+  background-color: white;
+  border: 1px solid gray;
+  padding: 10px;
+  width: 220px;
+}
+
+button {
+  margin-top: 8px;
+  margin-right: 5px;
+  padding: 5px 8px;
+  cursor: pointer;
+}
